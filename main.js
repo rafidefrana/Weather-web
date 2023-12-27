@@ -13,14 +13,14 @@ async function weatherFetch() {
         cityRef.value = "";
         await fetch(url).then((response) => response.json())
         .then((data) => {
-            console.log(data);
-            console.log(data.name);
-            console.log(data.weather[0].description)
-            console.log(data.weather[0].main)
-            console.log(data.weather[0].icon)
-            console.log(data.main.temp)
-            console.log(data.main.temp_min)
-            console.log(data.main.temp_max)
+            // console.log(data);
+            // console.log(data.name);
+            // console.log(data.weather[0].description)
+            // console.log(data.weather[0].main)
+            // console.log(data.weather[0].icon)
+            // console.log(data.main.temp)
+            // console.log(data.main.temp_min)
+            // console.log(data.main.temp_max)
             result.innerHTML = `
             <h2>${data.name}</h2>
             <h4 class="weather">${data.weather[0].main}</h4>
