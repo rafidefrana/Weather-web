@@ -1,0 +1,132 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+}
+
+:root {
+  --white: #ffffff;
+  --off-white: #e5e5e5;
+  --transp-white-1: rgba(255, 255, 255, 0.25);
+  --transp-white-2: rgba(255, 255, 255, 0.1);
+  --blue-1: #62b8f5;
+  --blue-2: #4475ef;
+  --shadow: rgba(3, 46, 87, 0.2);
+}
+
+body {
+  height: 100vh;
+  background-color: #4682a9;
+}
+
+.container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90vw;
+  max-width: 28em;
+  border-radius: 0.6em;
+  backdrop-filter: blur(5px);
+  box-shadow: 0 1.8em 3.7em var(--shadow);
+  background-color: #62b8f5;
+  padding: 3em 1.8em;
+  border: 2px solid var(--transp-white-2);
+}
+
+.search-container {
+  width: 100%;
+  gap: 1.2em;
+  display: grid;
+  grid-template-columns: 9fr 4fr;
+}
+
+.search-container input {
+  border: none;
+  outline: none;
+  border-bottom: 2px solid #fff;
+  background-color: transparent;
+  color: #000;
+}
+
+.search-container input::placeholder {
+  font-weight: 400;
+  color: #000;
+}
+
+button {
+  padding: 10px 20px;
+  border-radius: 5px;
+  color: var(--blue-2);
+  background-color: var(--white);
+  border: none;
+  cursor: pointer;
+}
+
+button:active {
+  background-color: var(--blue-2);
+  color: var(--white);
+}
+
+#result {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+#result h2 {
+  margin-top: 1.5rem;
+  font-weight: 500;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: var(--off-white);
+}
+
+.weather,
+.desc {
+  color: var(--off-white);
+  margin: 0.8em;
+  font-weight: 400;
+  text-transform: uppercase;
+  line-height: 0.8em;
+  letter-spacing: 0.2em;
+}
+
+#result img {
+  width: 4.3em;
+  margin: 0.6em 0 0 0;
+  filter: drop-shadow(0 1.8em 3.7em var(--shadow));
+}
+
+#result h1 {
+  font-size: 4rem;
+  font-weight: 600;
+  line-height: 0;
+  color: var(--white);
+  margin: 0.3em 0 0.7em 0;
+}
+
+.temp-container {
+  display: flex;
+  justify-content: center;
+}
+
+.temp-container div {
+  padding: 0.3em 1em;
+}
+
+.temp-container div:first-child {
+  border-right: 1px solid var(--transp-white-1);
+}
+
+.temp-container .title {
+  font-weight: 600;
+  color: var(--white);
+}
+
+.temp-container .temp {
+  font-weight: 300;
+  color: var(--white);
+}
